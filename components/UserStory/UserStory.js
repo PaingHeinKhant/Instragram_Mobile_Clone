@@ -18,3 +18,4 @@ UserStory.prototype = {
 };
 
 export default UserStory;
+
