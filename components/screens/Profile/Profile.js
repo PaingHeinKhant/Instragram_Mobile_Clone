@@ -1,3 +1,4 @@
+// components/screens/Profile/Profile.js
 import React from "react";
 import {
   View,
@@ -10,12 +11,13 @@ import style from "./style";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import {
   faBars,
-  faEnvelope,
-  faPlus,
   faPlusCircle,
+  faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import globalStyle from "../../../assets/styles/globalStyle";
 import Title from "../../Title/Title";
+import { ProfileTabsNavigation } from "../../../navigation/ProfileTabsNavigation";
+
 const Profile = ({ navigation }) => {
   return (
     <SafeAreaView style={[globalStyle.backgroundWhite, globalStyle.flex]}>
@@ -42,11 +44,7 @@ const Profile = ({ navigation }) => {
           <View>
             <Image
               source={require("../../../assets/images/one.jpg")}
-              style={{
-                width: 120,
-                height: 120,
-                borderRadius: 120,
-              }}
+              style={{ width: 120, height: 120, borderRadius: 120 }}
             />
           </View>
           <View style={style.numberPostContainerContainer}>
@@ -56,7 +54,7 @@ const Profile = ({ navigation }) => {
             </View>
             <View style={style.numberPostContainer}>
               <Text style={style.numberPost}>3K</Text>
-              <Text style={style.textPost}>Follower</Text>
+              <Text style={style.textPost}>Followers</Text>
             </View>
             <View style={style.numberPostContainer}>
               <Text style={style.numberPost}>1K</Text>
@@ -65,9 +63,9 @@ const Profile = ({ navigation }) => {
           </View>
         </View>
         <Text style={style.name}>Paing Hein Khant</Text>
-        <Text style={style.quats}>
-          If I am not building something,I would be thinking of building
-          something .
+        <Text style={style.quotes}>
+          If I am not building something, I would be thinking of building
+          something.
         </Text>
         <View style={style.buttonContainer}>
           <TouchableOpacity style={style.profileButtonContainer}>
@@ -76,8 +74,12 @@ const Profile = ({ navigation }) => {
           <TouchableOpacity style={style.profileButtonContainer}>
             <Text style={style.profileButtonText}>Share Profile</Text>
           </TouchableOpacity>
+          <TouchableOpacity style={style.profileButtonContainer}>
+            <FontAwesomeIcon size={23} icon={faUserPlus} color={"#898DA3"} />
+          </TouchableOpacity>
         </View>
       </View>
+      <ProfileTabsNavigation />
     </SafeAreaView>
   );
 };

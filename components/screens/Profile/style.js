@@ -62,33 +62,34 @@ const style = StyleSheet.create({
     marginHorizontal: 15,
   },
   numberPost: {
-    fontFamily: getFontFamily("Inter", "900"),
-    fontSize: 14,
+    fontFamily: getFontFamily("Inter", "600"),
+    fontSize: 17,
   },
   textPost: {
     fontFamily: getFontFamily("Inter", "400"),
     fontSize: 12,
   },
-  quats: {
+  quotes: {
     fontFamily: getFontFamily("Inter", "400"),
     fontSize: 13,
   },
   buttonContainer: {
-    marginVertical: 20,
+    flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#f0f0f0",
+    marginVertical: 15,
   },
   profileButtonContainer: {
-    backgroundColor: "transparent", // Transparent background
-    paddingVertical: 10, // Vertical padding
-    paddingHorizontal: 20, // Horizontal padding
-    borderRadius: 5, // Rounded corners
-    marginBottom: 10, // Space between buttons
+    backgroundColor: "#f0f0f0",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 9,
+    marginRight: 10,
   },
   profileButtonText: {
-    color: "#007BFF", // Text color
-    fontSize: 16, // Font size
-    textAlign: "center", // Center the text
+    color: "#000",
+    fontSize: 16,
+    fontFamily: getFontFamily("Inter", "600"),
+    textAlign: "center",
   },
 });
 

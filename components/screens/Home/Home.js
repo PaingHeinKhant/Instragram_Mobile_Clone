@@ -8,7 +8,7 @@ import {
 import React from "react";
 import Title from "../../../components/Title/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import style from "./style";
 import UserStory from "../../../components/UserStory/UserStory";
 import UserPost from "../../../components/UserPost/UserPost";
@@ -152,11 +152,8 @@ const Home = ({ navigation }) => {
               <Text style={style.messageNumber}>2</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity
-            style={style.userIcon}
-            onPress={() => navigation.navigate("Profile")}
-          >
-            <FontAwesomeIcon size={20} icon={faUser} color={"#898DA3"} />
+          <TouchableOpacity style={style.userIcon}>
+            <FontAwesomeIcon size={20} icon={faPaperPlane} color={"#898DA3"} />
           </TouchableOpacity>
         </View>
       </View>
